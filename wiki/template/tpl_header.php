@@ -20,35 +20,34 @@ if (!defined('DOKU_INC')) die();
             <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
         </ul>
 
-        <h1><?php
-            // get logo either out of the template images folder or data/media folder
-            $logoSize = array();
-            $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
+        <?php
 
             // display logo and wiki title in a link to the home page
             tpl_link(
                 wl(),
-                '<img src="'.$logo.'" '.$logoSize[3].' alt="" /> <span>'.$conf['title'].'</span>',
+                '<span class="wikiTitle">'.$conf['title'].'</span>',
                 'accesskey="h" title="[H]"'
             );
-        ?></h1>
+        ?>
         <?php if ($conf['tagline']): ?>
             <p class="claim"><?php echo $conf['tagline']; ?></p>
         <?php endif ?>
     </div>
 
-    <div class="tools group">
+    <div class="tools">
         <!-- USER TOOLS -->
         <?php if ($conf['useacl']): ?>
             <div id="dokuwiki__usertools">
                 <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
+                <?php
+                    if (!empty($_SERVER['REMOTE_USER'])) {
+                        echo '<span class="user">';
+                        tpl_userinfo();
+                        echo '</span>';
+                    }
+				?>
                 <ul>
                     <?php
-                        if (!empty($_SERVER['REMOTE_USER'])) {
-                            echo '<li class="user">';
-                            tpl_userinfo(); /* 'Logged in as ...' */
-                            echo '</li>';
-                        }
                         tpl_action('admin', 1, 'li');
                         tpl_action('profile', 1, 'li');
                         tpl_action('register', 1, 'li');
@@ -69,12 +68,19 @@ if (!defined('DOKU_INC')) die();
                 <?php
                     tpl_action('recent', 1, 'li');
                     tpl_action('media', 1, 'li');
-                    tpl_action('index', 1, 'li');
+//                    tpl_action('index', 1, 'li');
                 ?>
             </ul>
         </div>
 
     </div>
+
+   <div class="relMenu">
+      <div class="relMenuItem relMenuItemSelected" ><a href="/">Wiki</a></div>
+      <div class="relMenuItem" ><a href="http://rel-rfg.neyrick.fr" >Planning des parties</a></div>
+      <div class="relMenuItem" ><a href="http://reves-et-legendes.forum2jeux.com">Forum</a></div>
+    </div>
+
 
     <!-- BREADCRUMBS -->
     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
@@ -87,6 +93,16 @@ if (!defined('DOKU_INC')) die();
             <?php endif ?>
         </div>
     <?php endif ?>
+
+	<?php
+            // get logo either out of the template images folder or data/media folder
+            $logoSize = array();
+            $logo = tpl_getMediaFile(array('images/banner.png'), false, $logoSize);
+		
+	?>
+    <div class="relHeaderPic">
+      <img src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" />
+    </div>
 
     <?php html_msgarea() ?>
 

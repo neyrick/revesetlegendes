@@ -15,7 +15,7 @@ html {
 html,
 body {
     color: @ini_text;
-    background: @ini_background_site url(images/page-gradient.png) top left repeat-x;
+    background: @ini_background_site;
     margin: 0;
     padding: 0;
 }
@@ -55,28 +55,38 @@ h6 {
 [dir=rtl] h6 {
     clear: right;
 }
-
 h1 {
-    font-size: 2em;
+    border-bottom: 1px solid @ini_background_alt;
+    font-size: 2.5em;
     margin: 0 0 0.444em;
+    font-weight: normal;
+    font-style: italic;
 }
 h2 {
+    border-bottom: 1px solid @ini_background_alt;
     font-size: 1.5em;
     margin: 0 0 0.666em;
+    font-weight: normal;
 }
 h3 {
+    font-weight: bold;
     font-size: 1.125em;
     margin: 0 0 0.888em;
 }
 h4 {
+    font-style: italic;
     font-size: 1em;
     margin: 0 0 1.0em;
+    font-weight: normal;
 }
 h5 {
+    font-style: italic;
+    font-weight: normal;
     font-size: .875em;
     margin: 0 0 1.1428em;
 }
 h6 {
+    font-weight: normal;
     font-size: .75em;
     margin: 0 0 1.333em;
 }
