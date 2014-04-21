@@ -1,0 +1,7 @@
+base     relwiki
+author   Madria & Neyrick
+email    forget@it.com
+date     2014-04-21
+name     Template Rêves et Légndes
+desc     Modèle de Wiki Rêves et Légendes
+url      #
