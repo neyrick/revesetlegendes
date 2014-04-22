@@ -38,7 +38,7 @@
 }
 
 #mediamanager__page .panelHeader {
-    background-color: @ini_background_alt;
+    background-color: @ini_background_site;
     margin: 0 10px 10px 0;
     padding: 10px 10px 8px;
     text-align: left;
@@ -52,6 +52,7 @@
     padding: 0;
     margin: 0 10px 10px 0;
     position: relative;
+    background-color: @ini_background_site;
 }
 [dir=rtl] #mediamanager__page .panelContent {
     text-align: right;
@@ -97,11 +98,11 @@
     display: inline-block;
     padding: .3em .8em;
     margin: 0 0 0 .3em;
-    border-radius: .5em .5em 0 0;
+/*    border-radius: .5em .5em 0 0; */
     font-weight: normal;
-    background-color: @ini_background_alt;
-    color: @ini_text;
-    border: 1px solid @ini_border;
+    background-color: @ini_rel_main_color;
+    color: #FFF;
+/*    border: 1px solid @ini_border; */
     border-bottom-color: @ini_background_alt;
     line-height: 1.4em;
     position: relative;
