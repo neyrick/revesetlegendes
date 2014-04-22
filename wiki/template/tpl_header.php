@@ -77,7 +77,7 @@ if (!defined('DOKU_INC')) die();
 
    <div class="relMenu">
       <div class="relMenuItem relMenuItemSelected" ><a href="/">Wiki</a></div>
-      <div class="relMenuItem" ><a href="http://rel-rfg.neyrick.fr" >Planning des parties</a></div>
+      <div class="relMenuItem" ><a href="http://rel-tfg.neyrick.fr" >Planning des parties</a></div>
       <div class="relMenuItem" ><a href="http://reves-et-legendes.forum2jeux.com">Forum</a></div>
     </div>
 
@@ -96,8 +96,11 @@ if (!defined('DOKU_INC')) die();
 
 	<?php
             // get logo either out of the template images folder or data/media folder
+            $nsbreak = explode(":", $INFO['namespace']);
+            if (count($nsbreak) > 0) $firstns = ":" . $nsbreak[0] . ":banner.png";
+            else $firstns = ":banner.png";
             $logoSize = array();
-            $logo = tpl_getMediaFile(array('images/banner.png'), false, $logoSize);
+            $logo = tpl_getMediaFile(array($firstns,':banner.png'), false, $logoSize);
 		
 	?>
     <div class="relHeaderPic">
