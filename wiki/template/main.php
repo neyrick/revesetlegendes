@@ -21,6 +21,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders() ?>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="<?php echo tpl_basedir() ?>/fonts/stylesheet.css" type="text/css" charset="utf-8" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
     <?php include('tpl_custom_styles.php') ?>
@@ -51,7 +52,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
             <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content"><div class="pad group">
 
-              <?php if (false) { ?>  <div class="pageId"><span><?php echo hsc($ID) ?></span></div> <? } ?>
+              <?php if (false) { ?>  <div class="pageId"><span><?php echo hsc($ID) ?></span></div> <?php } ?>
 
                 <div class="page group">
                     <?php tpl_flush() ?>

@@ -29,12 +29,12 @@ if (!defined('DOKU_INC')) die();
 				?>
                 <ul>
                     <?php
-                        tpl_action('recent', 1, 'li');
-                        tpl_action('media', 1, 'li');
-                        tpl_action('admin', 1, 'li');
-                        tpl_action('profile', 1, 'li');
-                        tpl_action('register', 1, 'li');
-                        tpl_action('login', 1, 'li');
+                        tpl_action('recent', 1, 'li class="recent"');
+                        tpl_action('media', 1, 'li class="media"');
+                        tpl_action('admin', 1, 'li class="admin"');
+                        tpl_action('profile', 1, 'li class="profile"');
+                        tpl_action('register', 1, 'li class="register"');
+                        tpl_action('login', 1, 'li class="login"');
 //                      tpl_action('index', 1, 'li');
                     ?>
                 </ul>

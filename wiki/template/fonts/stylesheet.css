@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'amerikaregular';
+    src: url('amerika_regular/AMERIKA_-webfont.eot');
+    src: url('amerika_regular/AMERIKA_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('amerika_regular/AMERIKA_-webfont.woff') format('woff'),
+         url('amerika_regular/AMERIKA_-webfont.ttf') format('truetype'),
+         url('amerika_regular/AMERIKA_-webfont.svg#amerikaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

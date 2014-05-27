@@ -51,6 +51,7 @@
     .wikiTitle {
       font-size: 2em;
       color: @ini_rel_main_color;
+      font-family: 'amerikaregular', Arial, sans-serif;
     }
     
     .relHeaderPic {
@@ -164,12 +165,27 @@
 
 /*____________ user tools ____________*/
 
+.mode_admin #dokuwiki__usertools .admin,
+.mode_login #dokuwiki__usertools .login,
+.mode_register #dokuwiki__usertools .register,
+.mode_profile #dokuwiki__usertools .profile,
+.mode_recent #dokuwiki__usertools .recent,
+.mode_index #dokuwiki__usertools .index,
+.mode_media #dokuwiki__usertools .media,
+.mode_revisions #dokuwiki__usertools .revs,
+.mode_backlink #dokuwiki__usertools .backlink,
+.mode_subscribe #dokuwiki__usertools .subscribe {
+    background-color: @ini_rel_sec_color;
+}
+
 #dokuwiki__usertools {
   float: right;
   text-align: center;
   background: @ini_rel_main_color;
-  font: 15px/26px "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif;
+  font: 14px/26px "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif;
   color: #fff;
+
+
 
 /*  
     position: absolute;
@@ -482,9 +498,7 @@
 .wrap_reltip {
   background-color: @ini_background_site;
   border: 1px solid @ini_border;
-}
-
-padding: 1.5em  !important;
+  padding: 1.5em;
 }
 
 div.inlinetoc2 {
@@ -508,7 +522,7 @@ div.inlinetoc2 {
 }
 
 div.dokuwiki div.comment_wrapper {
-  padding:1.5em;
+  padding: 1.5em;
   border: 1px solid @ini_border;
   background: @ini_background_site;
   margin: 0px;

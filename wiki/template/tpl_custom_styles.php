@@ -35,7 +35,7 @@ a:visited {
     background-color: #<?php echo $color1 ?>;
 }
 .dokuwiki a.wikilink1 {
-    color: #<?php echo $color2 ?>;
+    color: #<?php echo $color1 ?>;
 }
 .dokuwiki ul.tabs li a {
     background-color: #<?php echo $color1 ?>;
@@ -72,6 +72,18 @@ a:visited {
 }
 div.inlinetoc2 ul li {
     color: #<?php echo $color2 ?>; !important;
+}
+.mode_admin #dokuwiki__usertools .admin,
+.mode_login #dokuwiki__usertools .login,
+.mode_register #dokuwiki__usertools .register,
+.mode_profile #dokuwiki__usertools .profile,
+.mode_recent #dokuwiki__usertools .recent,
+.mode_index #dokuwiki__usertools .index,
+.mode_media #dokuwiki__usertools .media,
+.mode_revisions #dokuwiki__usertools .revs,
+.mode_backlink #dokuwiki__usertools .backlink,
+.mode_subscribe #dokuwiki__usertools .subscribe {
+    background-color: #<?php echo $color2 ?>;
 }
 </style>
 <!-- /styles -->
