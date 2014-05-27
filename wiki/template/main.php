@@ -23,6 +23,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
+    <?php include('tpl_custom_styles.php') ?>
 </head>
 
 <body>
@@ -50,7 +51,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
             <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content"><div class="pad group">
 
-                <div class="pageId"><span><?php echo hsc($ID) ?></span></div>
+              <?php if (false) { ?>  <div class="pageId"><span><?php echo hsc($ID) ?></span></div> <? } ?>
 
                 <div class="page group">
                     <?php tpl_flush() ?>

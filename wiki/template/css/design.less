@@ -43,6 +43,7 @@
 
       a {
           font-weight: normal; 
+/*          padding:1em; */
      }
     }
     .relMenuItemSelected {
@@ -397,6 +398,7 @@
     color: inherit;
     border-left: 1px solid @ini_background_alt;
     border-bottom: 1px solid @ini_background_alt;
+    border-right: 1px solid @ini_background_alt;
     margin-left: 200px;
 //    box-shadow: 0 0 .5em @ini_text_alt;
     border-radius: 2px;
@@ -509,6 +511,14 @@
   color: #FFF;
 }
 
+.wrap_reltip {
+  background-color: @ini_background_site;
+  border: 1px solid @ini_border;
+}
+
+padding: 1.5em  !important;
+}
+
 div.inlinetoc2 {
   float: left;
   border-radius: 0px !important;
@@ -530,6 +540,8 @@ div.inlinetoc2 {
 }
 
 div.dokuwiki div.comment_wrapper {
+  padding:1.5em;
+  border: 1px solid @ini_border;
   background: @ini_background_site;
   margin: 0px;
 }
