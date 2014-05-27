@@ -1,0 +1,3 @@
+====== Dynamic CSS Manager ======
+
+Pick colors for each subwiki

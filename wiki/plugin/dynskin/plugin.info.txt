@@ -1,0 +1,7 @@
+base     dynskin
+author   Eric Demorsy
+email    dev@neyrick.fr
+date     2014-04-22
+name     DynSkin Plugin
+desc     Set custom values for each base namespace to use in dynamically generated css
+url      http://dokuwiki.org/plugin:synskin

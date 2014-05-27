@@ -1,0 +1,3 @@
+====== Gestionnaire de css dynamiques ======
+
+Choisis les couleurs pour chaque sous-wiki
