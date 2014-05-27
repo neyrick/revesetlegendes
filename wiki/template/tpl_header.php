@@ -15,6 +15,36 @@ if (!defined('DOKU_INC')) die();
 	<div class="relHeaderSpacer">
         </div>
 
+    <div class="tools">
+        <!-- USER TOOLS -->
+        <?php if ($conf['useacl']): ?>
+            <div id="dokuwiki__usertools">
+                <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
+                <?php
+                    if (!empty($_SERVER['REMOTE_USER'])) {
+                        echo '<span class="user">';
+                        tpl_userinfo();
+                        echo '</span>';
+                    }
+				?>
+                <ul>
+                    <?php
+                        tpl_action('recent', 1, 'li');
+                        tpl_action('media', 1, 'li');
+                        tpl_action('admin', 1, 'li');
+                        tpl_action('profile', 1, 'li');
+                        tpl_action('register', 1, 'li');
+                        tpl_action('login', 1, 'li');
+//                      tpl_action('index', 1, 'li');
+                    ?>
+                </ul>
+                <div class="mobileTools">
+                    <?php tpl_actiondropdown($lang['tools']); ?>
+                </div>
+            </div>
+        <?php endif ?>
+    </div>
+
     <div class="headings group">
         <ul class="a11y skip">
             <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
@@ -34,65 +64,13 @@ if (!defined('DOKU_INC')) die();
         <?php endif ?>
     </div>
 
-    <div class="tools">
-        <!-- USER TOOLS -->
-        <?php if ($conf['useacl']): ?>
-            <div id="dokuwiki__usertools">
-                <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
-                <?php
-                    if (!empty($_SERVER['REMOTE_USER'])) {
-                        echo '<span class="user">';
-                        tpl_userinfo();
-                        echo '</span>';
-                    }
-				?>
-                <ul>
-                    <?php
-                        tpl_action('admin', 1, 'li');
-                        tpl_action('profile', 1, 'li');
-                        tpl_action('register', 1, 'li');
-                        tpl_action('login', 1, 'li');
-                    ?>
-                </ul>
-            </div>
-        <?php endif ?>
-
-        <!-- SITE TOOLS -->
-        <div id="dokuwiki__sitetools">
-            <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
-            <?php tpl_searchform(); ?>
-            <div class="mobileTools">
-                <?php tpl_actiondropdown($lang['tools']); ?>
-            </div>
-            <ul>
-                <?php
-                    tpl_action('recent', 1, 'li');
-                    tpl_action('media', 1, 'li');
-//                    tpl_action('index', 1, 'li');
-                ?>
-            </ul>
-        </div>
-
-    </div>
-
    <div class="relMenu">
       <div class="relMenuItem relMenuItemSelected" ><a href="/">Wiki</a></div>
       <div class="relMenuItem" ><a href="http://rel-tfg.neyrick.fr" >Planning des parties</a></div>
       <div class="relMenuItem" ><a href="http://reves-et-legendes.forum2jeux.com">Forum</a></div>
+      <div class="relMenuItem rightMenu" ><?php tpl_searchform(); ?></div>      
     </div>
 
-
-    <!-- BREADCRUMBS -->
-    <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
-        <div class="breadcrumbs">
-            <?php if($conf['youarehere']): ?>
-                <div class="youarehere"><?php tpl_youarehere() ?></div>
-            <?php endif ?>
-            <?php if($conf['breadcrumbs']): ?>
-                <div class="trace"><?php tpl_breadcrumbs() ?></div>
-            <?php endif ?>
-        </div>
-    <?php endif ?>
 
 	<?php
             // get logo either out of the template images folder or data/media folder
@@ -106,6 +84,18 @@ if (!defined('DOKU_INC')) die();
     <div class="relHeaderPic">
       <img src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" />
     </div>
+
+    <!-- BREADCRUMBS -->
+    <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
+        <div class="breadcrumbs">
+            <?php if($conf['youarehere']): ?>
+                <div class="youarehere"><?php tpl_youarehere() ?></div>
+            <?php endif ?>
+            <?php if($conf['breadcrumbs']): ?>
+                <div class="trace"><?php tpl_breadcrumbs() ?></div>
+            <?php endif ?>
+        </div>
+    <?php endif ?>
 
     <?php html_msgarea() ?>
 
