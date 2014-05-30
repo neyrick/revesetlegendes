@@ -1,0 +1,42 @@
+.pageId{
+display:none !important;
+}
+
+.dokuwiki a.wikilink1 {
+color:#0d7b91 !important;
+}
+
+.dokuwiki div.wrap_round {
+border-radius:0 !important;
+}
+
+.dokuwiki .wrap_tip {
+background-color: #e6e6e6 !important;
+border: 1px solid #a9a9a9 !important;
+}
+
+.dokuwiki div.page {
+border-right: 1px solid #a9a9a9 !important;
+}
+
+.dokuwiki div.wrap_tip {
+background-image:none !important;
+}
+
+.dokuwiki div.wrap_info, .dokuwiki div.wrap_important, .dokuwiki div.wrap_alert, .dokuwiki div.wrap_tip, .dokuwiki div.wrap_help, .dokuwiki div.wrap_todo, .dokuwiki div.wrap_download {
+padding: 1.5em  !important;
+}
+
+div.dokuwiki div.comment_wrapper {
+padding:1.5em !important;
+border: 1px solid #a9a9a9 !important;
+}
+
+#dokuwiki__header .relMenuItem a {
+padding:1em !important;
+}
+
+#dw__toc {
+background-color: #e6e6e6 !important;
+border-bottom: 1px solid #a9a9a9 !important;
+}

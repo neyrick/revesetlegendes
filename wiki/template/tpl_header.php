@@ -12,9 +12,6 @@ if (!defined('DOKU_INC')) die();
   
     <?php tpl_includeFile('header.html') ?>
 
-	<div class="relHeaderSpacer">
-        </div>
-
     <div class="tools">
         <!-- USER TOOLS -->
         <?php if ($conf['useacl']): ?>
@@ -22,22 +19,20 @@ if (!defined('DOKU_INC')) die();
                 <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
                 <?php
                     if (!empty($_SERVER['REMOTE_USER'])) {
-                        echo '<span class="user">';
+                        echo '<div class="user">';
                         tpl_userinfo();
-                        echo '</span>';
+                        echo '</div>';
                     }
 				?>
-                <ul>
                     <?php
-                        tpl_action('recent', 1, 'li class="recent"');
-                        tpl_action('media', 1, 'li class="media"');
-                        tpl_action('admin', 1, 'li class="admin"');
-                        tpl_action('profile', 1, 'li class="profile"');
-                        tpl_action('register', 1, 'li class="register"');
-                        tpl_action('login', 1, 'li class="login"');
+                        tpl_action('recent', 1, 'div class="recent"');
+                        tpl_action('media', 1, 'div class="media"');
+                        tpl_action('admin', 1, 'div class="admin"');
+                        tpl_action('profile', 1, 'div class="profile"');
+                        tpl_action('register', 1, 'div class="register"');
+                        tpl_action('login', 1, 'div class="login"');
 //                      tpl_action('index', 1, 'li');
                     ?>
-                </ul>
                 <div class="mobileTools">
                     <?php tpl_actiondropdown($lang['tools']); ?>
                 </div>
@@ -75,15 +70,13 @@ if (!defined('DOKU_INC')) die();
 	<?php
             // get logo either out of the template images folder or data/media folder
             $nsbreak = explode(":", $INFO['namespace']);
-            if (count($nsbreak) > 0) $firstns = ":" . $nsbreak[0] . ":banner.png";
-            else $firstns = ":banner.png";
+            if ((count($nsbreak) > 0) && ($INFO['namespace'] != "")) $firstns = ":" . $nsbreak[0] . ":banner.png";
+            else $firstns = ":public:banner.png";
             $logoSize = array();
-            $logo = tpl_getMediaFile(array($firstns,':banner.png'), false, $logoSize);
+            $logo = tpl_getMediaFile(array($firstns,'banner.png'), false, $logoSize);
 		
 	?>
-    <div class="relHeaderPic">
-      <img src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" />
-    </div>
+    <div class="relHeaderPic"><img src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" /></div>
 
     <!-- BREADCRUMBS -->
     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
