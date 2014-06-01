@@ -35,7 +35,7 @@ a:visited {
     background-color: #<?php echo $color1 ?>;
 }
 .dokuwiki a.wikilink1 {
-    color: #<?php echo $color1 ?>;
+    color: #<?php echo $color2 ?>;
 }
 .dokuwiki ul.tabs li a {
     background-color: #<?php echo $color1 ?>;
@@ -69,6 +69,9 @@ a:visited {
 }
 .wrap_relinfoboxtitle {
   background: #<?php echo $color1 ?>; 
+}
+#dokuwiki__header .tools {
+  background: #<?php echo $color1 ?>;
 }
 div.inlinetoc2 ul li {
     color: #<?php echo $color2 ?>; !important;

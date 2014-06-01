@@ -73,10 +73,10 @@ if (!defined('DOKU_INC')) die();
             if ((count($nsbreak) > 0) && ($INFO['namespace'] != "")) $firstns = ":" . $nsbreak[0] . ":banner.png";
             else $firstns = ":public:banner.png";
             $logoSize = array();
-            $logo = tpl_getMediaFile(array($firstns,'banner.png'), false, $logoSize);
+            $logo = tpl_getMediaFile(array($firstns,'images/banner.png'), false, $logoSize);
 		
 	?>
-    <div class="relHeaderPic"><img src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" /></div>
+    <div class="relHeaderPic"><a href="doku.php?id=<?php echo $nsbreak[0] ?>:start"><img border="0" src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" /></a></div>
 
     <!-- BREADCRUMBS -->
     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
