@@ -1,0 +1,7 @@
+base     relactions
+author   Eric Demorsy
+email    dev@neyrick.fr
+date     2014-06-30
+name     REL Custom  Plugin
+desc     Aggregate of specific additions for Reves et Legendes
+url      http://dokuwiki.org/plugin:relactions
