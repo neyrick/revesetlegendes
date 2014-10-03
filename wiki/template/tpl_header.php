@@ -70,10 +70,10 @@ if (!defined('DOKU_INC')) die();
 	<?php
             // get logo either out of the template images folder or data/media folder
             $nsbreak = explode(":", $INFO['namespace']);
-            if ((count($nsbreak) > 0) && ($INFO['namespace'] != "")) $firstns = ":" . $nsbreak[0] . ":banner.png";
-            else $firstns = ":public:banner.png";
+            if ((count($nsbreak) > 0) && ($INFO['namespace'] != "")) $firstns = ":" . $nsbreak[0] . ":banner.";
+            else $firstns = ":public:banner.";
             $logoSize = array();
-            $logo = tpl_getMediaFile(array($firstns,'images/banner.png'), false, $logoSize);
+            $logo = tpl_getMediaFile(array($firstns . ".png", $firstns . ".jpg",'images/banner.png'), false, $logoSize);
 		
 	?>
     <div class="relHeaderPic"><a href="doku.php?id=<?php echo $nsbreak[0] ?>:start"><img border="0" src="<?php echo $logo ?>" <?php echo $logoSize[3] ?> alt="" /></a></div>
